@@ -1,6 +1,5 @@
 var output = d3.select('.myOutput');
 
-
 // Get a reference to the table body
 var tbody = d3.select("tbody");
 
@@ -17,14 +16,15 @@ var tableData = data;
 
 //`date/time`, `city`, `state`, `country`, `shape`, and `comment` 
 tableData.forEach(function(datum) {
-
     var row = tbody.append("tr");
-    //console.log('row', row)
+    console.log('row', row);
     Object.entries(datum).forEach(([key, value]) => {
         var cell = tbody.append("td");
         cell.text(value);
       });
   });
+
+  //d3.select("tbody").html("")
 
 
   // Input fields can trigger a change event when new text is entered.
